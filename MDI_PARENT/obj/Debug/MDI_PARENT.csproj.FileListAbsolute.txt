@@ -1,0 +1,10 @@
+C:\Users\53023\Documents\GitHub\Projects_Module10_11E\MDI_PARENT\bin\Debug\MDI_PARENT.exe.config
+C:\Users\53023\Documents\GitHub\Projects_Module10_11E\MDI_PARENT\bin\Debug\MDI_PARENT.exe
+C:\Users\53023\Documents\GitHub\Projects_Module10_11E\MDI_PARENT\bin\Debug\MDI_PARENT.pdb
+C:\Users\53023\Documents\GitHub\Projects_Module10_11E\MDI_PARENT\obj\Debug\MDI_PARENT.csproj.AssemblyReference.cache
+C:\Users\53023\Documents\GitHub\Projects_Module10_11E\MDI_PARENT\obj\Debug\MDI_PARENT.Properties.Resources.resources
+C:\Users\53023\Documents\GitHub\Projects_Module10_11E\MDI_PARENT\obj\Debug\MDI_PARENT.csproj.GenerateResource.cache
+C:\Users\53023\Documents\GitHub\Projects_Module10_11E\MDI_PARENT\obj\Debug\MDI_PARENT.csproj.CoreCompileInputs.cache
+C:\Users\53023\Documents\GitHub\Projects_Module10_11E\MDI_PARENT\obj\Debug\MDI_PARENT.exe
+C:\Users\53023\Documents\GitHub\Projects_Module10_11E\MDI_PARENT\obj\Debug\MDI_PARENT.pdb
+C:\Users\53023\Documents\GitHub\Projects_Module10_11E\MDI_PARENT\obj\Debug\MDI_PARENT.MDIParent1.resources
