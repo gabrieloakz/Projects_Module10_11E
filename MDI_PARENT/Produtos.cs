@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MDI_PARENT
 {
-    public partial class Form2 : Form
+    public partial class Produtos : Form
     {
-        public Form2()
+        public Produtos()
         {
             InitializeComponent();
         }

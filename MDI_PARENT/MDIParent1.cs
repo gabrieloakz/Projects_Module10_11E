@@ -17,11 +17,12 @@ namespace MDI_PARENT
         public MDIParent1()
         {
             InitializeComponent();
+            IsMdiContainer = true;
         }
 
         private void ShowNewForm(object sender, EventArgs e)
         {
-            Form childForm = new Form();
+            Form childForm = new Produtos();
             childForm.MdiParent = this;
             childForm.Text = "Janela " + childFormNumber++;
             childForm.Show();
@@ -54,17 +55,7 @@ namespace MDI_PARENT
             this.Close();
         }
 
-        private void CutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void PasteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
+        
 
         private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -104,14 +95,6 @@ namespace MDI_PARENT
             }
         }
 
-        private void editMenu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
