@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace MDI_PARENT
 {
-    public partial class MDIParent1 : Form
+    public partial class LojaXPTO : Form
     {
         private int childFormNumber = 0;
 
-        public MDIParent1()
+        public LojaXPTO()
         {
             InitializeComponent();
             IsMdiContainer = true;
@@ -22,7 +22,7 @@ namespace MDI_PARENT
 
         private void ShowNewForm(object sender, EventArgs e)
         {
-            Form childForm = new Produtos();
+            Form childForm = new FormsProdutos();
             childForm.MdiParent = this;
             childForm.Text = "Janela " + childFormNumber++;
             childForm.Show();
@@ -55,7 +55,7 @@ namespace MDI_PARENT
             this.Close();
         }
 
-        
+
 
         private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -95,6 +95,69 @@ namespace MDI_PARENT
             }
         }
 
-        
+        private void LojaXPTO_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+
+    public class Produtos
+    {
+        private int codigo; //de 0 a 3 digitos
+        private string nomeProduto; //limitar a 30 carcateres
+        private int categoria; //1 - Hardware | 2 - Software
+        private double preco; //formato 0000;
+
+        //construtor
+        public Produtos(int codigo, string nomeProduto, int categoria, double preco)
+        {
+            this.codigo = codigo;
+            this.nomeProduto = nomeProduto;
+            this.categoria = categoria;
+            this.preco = preco;
+        }
+
+        //seletores
+        public int getCodigo()
+        {
+            return codigo;
+        }
+
+        public string getNomeProduto()
+        {
+            return nomeProduto;
+        }
+
+        public int getCategoria()
+        {
+            return categoria;
+        }
+
+        public double getPreco()
+        {
+            return preco;
+        }
+
+        //modificadores
+
+       public void setCodigo(int codigo) 
+       {  
+            this.codigo = codigo;
+       }
+
+        public void setNomeProduto(string nomeProduto)
+        {
+            this.nomeProduto = nomeProduto;
+        }
+
+        public void setCategoria(int categoria)
+        {
+            this.categoria = categoria;
+        }
+
+        public void setPreco(double preco)
+        {
+            this.preco = preco;
+        }
     }
 }
