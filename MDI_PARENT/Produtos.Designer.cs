@@ -38,7 +38,7 @@
             this.labelPreçoProduto = new System.Windows.Forms.Label();
             this.listBoxProdutos = new System.Windows.Forms.ListBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.statusMsg1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusMsg = new System.Windows.Forms.ToolStripStatusLabel();
             this.buttonNovo = new System.Windows.Forms.Button();
             this.buttonAtualizar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
@@ -127,18 +127,18 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.statusMsg1});
+            this.statusMsg});
             this.statusStrip1.Location = new System.Drawing.Point(0, 428);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(800, 22);
             this.statusStrip1.TabIndex = 9;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // statusMsg1
+            // statusMsg
             // 
-            this.statusMsg1.Name = "statusMsg1";
-            this.statusMsg1.Size = new System.Drawing.Size(118, 17);
-            this.statusMsg1.Text = "toolStripStatusLabel1";
+            this.statusMsg.Name = "statusMsg";
+            this.statusMsg.Size = new System.Drawing.Size(118, 17);
+            this.statusMsg.Text = "toolStripStatusLabel1";
             // 
             // buttonNovo
             // 
@@ -148,6 +148,7 @@
             this.buttonNovo.TabIndex = 10;
             this.buttonNovo.Text = "Novo";
             this.buttonNovo.UseVisualStyleBackColor = true;
+            this.buttonNovo.Click += new System.EventHandler(this.buttonNovo_Click);
             // 
             // buttonAtualizar
             // 
@@ -166,6 +167,7 @@
             this.buttonCancelar.TabIndex = 12;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonEliminar
             // 
@@ -229,7 +231,7 @@
         private System.Windows.Forms.Label labelPreçoProduto;
         private System.Windows.Forms.ListBox listBoxProdutos;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel statusMsg1;
+        private System.Windows.Forms.ToolStripStatusLabel statusMsg;
         private System.Windows.Forms.Button buttonNovo;
         private System.Windows.Forms.Button buttonAtualizar;
         private System.Windows.Forms.Button buttonCancelar;
