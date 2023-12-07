@@ -61,21 +61,21 @@
             // 
             this.textCodigo.Location = new System.Drawing.Point(110, 20);
             this.textCodigo.Name = "textCodigo";
-            this.textCodigo.Size = new System.Drawing.Size(100, 20);
+            this.textCodigo.Size = new System.Drawing.Size(121, 20);
             this.textCodigo.TabIndex = 1;
             // 
             // textProduto
             // 
             this.textProduto.Location = new System.Drawing.Point(110, 50);
             this.textProduto.Name = "textProduto";
-            this.textProduto.Size = new System.Drawing.Size(100, 20);
+            this.textProduto.Size = new System.Drawing.Size(121, 20);
             this.textProduto.TabIndex = 2;
             // 
             // textPreco
             // 
             this.textPreco.Location = new System.Drawing.Point(110, 104);
             this.textPreco.Name = "textPreco";
-            this.textPreco.Size = new System.Drawing.Size(100, 20);
+            this.textPreco.Size = new System.Drawing.Size(121, 20);
             this.textPreco.TabIndex = 3;
             // 
             // labelNomeProduto
@@ -119,18 +119,19 @@
             // listBoxProdutos
             // 
             this.listBoxProdutos.FormattingEnabled = true;
-            this.listBoxProdutos.Location = new System.Drawing.Point(281, 29);
+            this.listBoxProdutos.Location = new System.Drawing.Point(237, 16);
             this.listBoxProdutos.Name = "listBoxProdutos";
-            this.listBoxProdutos.Size = new System.Drawing.Size(120, 95);
+            this.listBoxProdutos.Size = new System.Drawing.Size(263, 108);
             this.listBoxProdutos.TabIndex = 8;
+            this.listBoxProdutos.DoubleClick += new System.EventHandler(this.listboxProdutos_DoubleClick);
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusMsg});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 195);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(540, 22);
             this.statusStrip1.TabIndex = 9;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -158,6 +159,7 @@
             this.buttonAtualizar.TabIndex = 11;
             this.buttonAtualizar.Text = "Atualizar";
             this.buttonAtualizar.UseVisualStyleBackColor = true;
+            this.buttonAtualizar.Click += new System.EventHandler(this.buttonAtualizar_Click);
             // 
             // buttonCancelar
             // 
@@ -192,7 +194,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(540, 217);
             this.Controls.Add(this.buttonGuardar);
             this.Controls.Add(this.buttonEliminar);
             this.Controls.Add(this.buttonCancelar);

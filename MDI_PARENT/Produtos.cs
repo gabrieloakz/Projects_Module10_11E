@@ -122,11 +122,95 @@ namespace MDI_PARENT
             //usado posteriormente para caso seja necessário a sua separação (parse)
 
             string linha = textCodigo.Text.ToString() + " | " + textProduto.Text + " | " + comboBoxCategoria.SelectedItem + " | " + textPreco.Text.ToString();
-            
+
             //adicionar a listbox
             listBoxProdutos.Items.Add(linha);
 
-            //enviar mensagem apra o status
+            //enviar mensagem apra o status e limpar oc campos do formulário
+            statusMsg.Text = "Adicionado um novo produto.";
+            Limpar();
+        }
+
+        public int posicaoLista = -1;
+
+        private void listboxProdutos_DoubleClick(object sender, EventArgs e)
+        {
+            if (listBoxProdutos.SelectedIndex != -1)
+            {
+                //obter a posição na listbox do item a alterar
+                posicaoLista = listBoxProdutos.SelectedIndex;
+
+                //pegar no item selecionado na listbox e colocar nos campos
+                //fazendo um parse a toda a linha usando o separador "|"
+                string[] campos = listBoxProdutos.SelectedItem.ToString().Split('|');
+
+                //colocar em cada um dos campos do formulário
+                textCodigo.Text = campos[0];
+                textProduto.Text = campos[1];
+
+                switch (campos[2])
+                {
+                    case "Hardware": comboBoxCategoria.SelectedIndex = 0; break;
+                    case "Software": comboBoxCategoria.SelectedIndex = 1; break;
+                    default: comboBoxCategoria.SelectedIndex = -1; break;
+                }
+                textPreco.Text = campos[3];
+                textCodigo.Focus();
+            }
+        }
+
+        private void buttonAtualizar_Click(object sender, EventArgs e)
+        {
+            //se existir um elemnto selecionado podemos iniciar a ataualização
+            if (posicaoLista != -1)
+            {
+                //código seguinte é igual ao do botão Novo na verificação dos campos
+                int x; double y;
+                try
+                {
+                    if (!int.TryParse(textCodigo.Text, out x))
+                    {
+                        textCodigo.Focus();
+                        throw new Exception("Insira um Código válido.");
+                    }
+                    else if (Convert.ToInt32(textCodigo.Text) < 99)
+                    {
+                        textCodigo.Focus();
+                        throw new Exception("Insira um código com 3 ou mais dígitos");
+                    }
+
+                    if (textProduto.Text.Equals("") || textProduto.Text.Length < 3 || textProduto.Text.Length > 50)
+                    {
+                        textProduto.Focus();
+                        throw new Exception("Insira a descrição do produto (3 a 50 caracteres).");
+                    }
+
+                    if (comboBoxCategoria.SelectedIndex == -1)
+                    {
+                        throw new Exception("Escolha a categoria do produto.");
+                    }
+
+                    if (!double.TryParse(textProduto.Text, out y))
+                    {
+                        textPreco.Focus();
+                        throw new Exception("Insira em preço um valor monetário.");
+                    }
+                    else if (Convert.ToDouble(textPreco.Text) <= 0)
+                    {
+                        textPreco.Focus();
+                        throw new Exception("Insira em preço um valor superior a 0.");
+                    }
+                    //fim das verificações
+                }
+                catch (Exception ex)
+                {
+                    //enviar mensagem de erro da exceção
+                    MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    //regressar ao ponto de chamada de execução do botão
+                    return;
+                }
+            }
         }
     }
 }
