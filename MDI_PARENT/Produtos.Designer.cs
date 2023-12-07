@@ -179,15 +179,17 @@
             this.buttonEliminar.TabIndex = 13;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // buttonGuardar
             // 
             this.buttonGuardar.Location = new System.Drawing.Point(336, 155);
             this.buttonGuardar.Name = "buttonGuardar";
-            this.buttonGuardar.Size = new System.Drawing.Size(75, 23);
+            this.buttonGuardar.Size = new System.Drawing.Size(84, 23);
             this.buttonGuardar.TabIndex = 14;
             this.buttonGuardar.Text = "Guardar e Sair";
             this.buttonGuardar.UseVisualStyleBackColor = true;
+            this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
             // 
             // FormsProdutos
             // 

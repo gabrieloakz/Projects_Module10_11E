@@ -190,7 +190,7 @@ namespace MDI_PARENT
                         throw new Exception("Escolha a categoria do produto.");
                     }
 
-                    if (!double.TryParse(textProduto.Text, out y))
+                    if (!double.TryParse(textPreco.Text, out y))
                     {
                         textPreco.Focus();
                         throw new Exception("Insira em preço um valor monetário.");
@@ -209,8 +209,57 @@ namespace MDI_PARENT
 
                     //regressar ao ponto de chamada de execução do botão
                     return;
-                }
+                } 
+
+                //depois de verifcado vamos colocar uma string longa com os campos
+                //na posição correta da listbox, de acordo com o obtido em posicaoLista
+                string linha = textCodigo.Text.ToString() + " | " + textProduto.Text + " | " +  comboBoxCategoria.SelectedItem + " | " + textPreco.Text.ToString();
+
+                //colocar na posição correta da listbox
+                listBoxProdutos.Items.RemoveAt(posicaoLista);
+                listBoxProdutos.Items.Insert(posicaoLista, linha);
+                posicaoLista = -1;
+
+                statusMsg.Text = "Atualizado um produto.";
+                Limpar();
             }
+        }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            //se existir um elemento selecionado podemos eliminar
+            if (posicaoLista != -1)
+            {
+                //remover da listbox
+                listBoxProdutos.Items.RemoveAt(posicaoLista);
+                statusMsg.Text = "Eliminado um produto";
+                Limpar();
+            }
+        }
+
+        private void buttonGuardar_Click(object sender, EventArgs e)
+        {
+            //guarda cada item da listbox para o vetor
+            foreach (var listBoxItem in listBoxProdutos.Items)
+            {
+                string[] campos = listBoxItem.ToString().Split('|');
+
+                //converter para o tipo dos atributos da classe produtos
+                int cod = Convert.ToInt32(campos[0]);
+                string nomeProduto = campos[1];
+                int categoria = 1;
+                
+                if (campos[2].Equals("Software"))
+                {
+                    categoria = 2;
+                }
+                double preco = Convert.ToDouble(campos[3]);
+
+                //adiciona os objetos da classe Produtos no array usando o método
+                AdicionaProduto(new Produtos(cod, nomeProduto, categoria, preco));
+            }
+            //encerra o formulário (fica a faltar guardar num ficheiro de dados)
+            this.Close();
         }
     }
 }
