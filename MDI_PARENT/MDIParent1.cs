@@ -24,7 +24,15 @@ namespace MDI_PARENT
         {
             Form childForm = new FormsProdutos();
             childForm.MdiParent = this;
-            childForm.Text = "Janela " + childFormNumber++;
+            childForm.Text = "Produtos" ;
+            childForm.Show();
+        }
+
+        private void ShowListarForm(object sender, EventArgs e)
+        {
+            Form childForm = new FormListaProdutos();
+            childForm.MdiParent = this;
+            childForm.Text = "Lista de Produtos";
             childForm.Show();
         }
 

@@ -209,11 +209,11 @@ namespace MDI_PARENT
 
                     //regressar ao ponto de chamada de execução do botão
                     return;
-                } 
+                }
 
                 //depois de verifcado vamos colocar uma string longa com os campos
                 //na posição correta da listbox, de acordo com o obtido em posicaoLista
-                string linha = textCodigo.Text.ToString() + " | " + textProduto.Text + " | " +  comboBoxCategoria.SelectedItem + " | " + textPreco.Text.ToString();
+                string linha = textCodigo.Text.ToString() + " | " + textProduto.Text + " | " + comboBoxCategoria.SelectedItem + " | " + textPreco.Text.ToString();
 
                 //colocar na posição correta da listbox
                 listBoxProdutos.Items.RemoveAt(posicaoLista);
@@ -248,7 +248,7 @@ namespace MDI_PARENT
                 int cod = Convert.ToInt32(campos[0]);
                 string nomeProduto = campos[1];
                 int categoria = 1;
-                
+
                 if (campos[2].Equals("Software"))
                 {
                     categoria = 2;
@@ -258,6 +258,13 @@ namespace MDI_PARENT
                 //adiciona os objetos da classe Produtos no array usando o método
                 AdicionaProduto(new Produtos(cod, nomeProduto, categoria, preco));
             }
+            //abrir o formulário de listagem
+            Form flista = new FormListaProdutos(produtos, num_produtos);
+            FormListaProdutos.MdiParent = MdiParent;
+            flista.Show();
+            flista.Location = new Point(5, 5);
+            flista.Dock = DockStyle.Fill;
+
             //encerra o formulário (fica a faltar guardar num ficheiro de dados)
             this.Close();
         }
