@@ -260,7 +260,7 @@ namespace MDI_PARENT
             }
             //abrir o formulário de listagem
             Form flista = new FormListaProdutos(produtos, num_produtos);
-            FormListaProdutos.MdiParent = MdiParent;
+            flista.MdiParent = MdiParent;
             flista.Show();
             flista.Location = new Point(5, 5);
             flista.Dock = DockStyle.Fill;

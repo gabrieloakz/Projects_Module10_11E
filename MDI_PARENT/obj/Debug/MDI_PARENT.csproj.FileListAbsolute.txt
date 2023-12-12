@@ -9,3 +9,4 @@ C:\Users\53023\Documents\GitHub\Projects_Module10_11E\MDI_PARENT\obj\Debug\MDI_P
 C:\Users\53023\Documents\GitHub\Projects_Module10_11E\MDI_PARENT\obj\Debug\MDI_PARENT.pdb
 C:\Users\53023\Documents\GitHub\Projects_Module10_11E\MDI_PARENT\obj\Debug\MDI_PARENT.LojaXPTO.resources
 C:\Users\53023\Documents\GitHub\Projects_Module10_11E\MDI_PARENT\obj\Debug\MDI_PARENT.FormsProdutos.resources
+C:\Users\53023\Documents\GitHub\Projects_Module10_11E\MDI_PARENT\obj\Debug\MDI_PARENT.FormListaProdutos.resources
