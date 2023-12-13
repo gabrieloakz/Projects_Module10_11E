@@ -103,10 +103,7 @@ namespace MDI_PARENT
             }
         }
 
-        private void LojaXPTO_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 
     public class Produtos

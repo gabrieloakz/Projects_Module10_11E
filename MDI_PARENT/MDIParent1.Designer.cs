@@ -449,7 +449,6 @@
             this.MainMenuStrip = this.menuStrip;
             this.Name = "LojaXPTO";
             this.Text = "Loja XPTO";
-            this.Load += new System.EventHandler(this.LojaXPTO_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.toolStrip.ResumeLayout(false);
