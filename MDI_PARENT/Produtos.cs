@@ -54,7 +54,7 @@ namespace MDI_PARENT
         private void AdicionaProduto(Produtos p)
         {
             if (num_produtos < MaxProdutos)
-                produtos[num_produtos] = p;
+                produtos[num_produtos++] = p;
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)

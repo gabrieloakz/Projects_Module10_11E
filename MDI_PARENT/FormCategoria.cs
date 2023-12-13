@@ -12,9 +12,17 @@ namespace MDI_PARENT
 {
     public partial class FormCategoria : Form
     {
+
+        // declarar um vetor para armazenar as categorias
+        // //e um contador da posição atual no vetor
         public FormCategoria()
         {
             InitializeComponent();
+        }
+
+        private void FormCategoria_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

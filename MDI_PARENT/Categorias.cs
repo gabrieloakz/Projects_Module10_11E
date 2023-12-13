@@ -33,5 +33,29 @@ namespace MDI_PARENT
             this.fila = fila;
             this.prateleira = prateleira;
         }
+
+        //Seletores
+
+        public int getCodigo() { return codigo; }
+
+        public string getCategoria() {  return categoria; }
+
+        public string getZona() {  return zona; }
+
+        public int getFila() {  return fila; }
+
+        public int getPrateleira() {  return prateleira; }
+
+        //Modificadores
+
+        public void setCodigo(int codigo) {  this.codigo = codigo; }
+
+        public void setCategoria(string categoria) { this.categoria = categoria; }
+
+        public void setZona(string zona) { this.zona = zona; }
+
+        public void setFila(int fila) { this.fila = fila; }
+
+        public void setPrateleira(int prateleira) { this.prateleira = prateleira; }
     }
 }

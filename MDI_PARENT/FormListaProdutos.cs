@@ -40,7 +40,7 @@ namespace MDI_PARENT
             grelha.Rows.Clear();
             for (int i = 0; i < num_produtos; i++)
             {
-                grelha.Rows.Add(this.produtos[i].getCodigo().ToString(), this.produtos[i].getNomeProduto(), /*this.produtos[i].getCategoria().ToString(),*/ (this.produtos[i].Equals(1) ? "Hardware" : "Software"), this.produtos[i].getPreco().ToString());
+                grelha.Rows.Add(this.produtos[i].getCodigo().ToString(), this.produtos[i].getNomeProduto(), this.produtos[i].getCategoria().ToString(), (this.produtos[i].Equals(1) ? "Hardware" : "Software"), this.produtos[i].getPreco().ToString());
             }
 
         }
@@ -55,6 +55,9 @@ namespace MDI_PARENT
             this.Close();
         }
 
-        
+        private void buttonSair_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
