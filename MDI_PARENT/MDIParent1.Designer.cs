@@ -246,6 +246,7 @@
             this.pasteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
             this.pasteToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.pasteToolStripMenuItem.Text = "&Categorias";
+            this.pasteToolStripMenuItem.Click += new System.EventHandler(this.ShowCategoriasForm);
             // 
             // toolStripSeparator7
             // 

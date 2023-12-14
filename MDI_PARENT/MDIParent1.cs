@@ -28,6 +28,14 @@ namespace MDI_PARENT
             childForm.Show();
         }
 
+        private void ShowCategoriasForm(object sender, EventArgs e)
+        {
+            Form childForm = new FormCategoria();
+            childForm.MdiParent = this;
+            childForm.Text = "Categorias";
+            childForm.Show();
+        }
+
         private void ShowListarForm(object sender, EventArgs e)
         {
             Form childForm = new FormListaProdutos();
