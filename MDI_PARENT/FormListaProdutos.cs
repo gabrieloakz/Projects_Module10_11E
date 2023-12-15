@@ -43,8 +43,8 @@ namespace MDI_PARENT
                 grelha.Rows.Add(
                     this.produtos[i].getCodigo().ToString(), 
                     this.produtos[i].getNomeProduto(),
-                    
-                    (this.produtos[i].Equals(1) ? "Hardware" : "Software"), 
+
+                    this.produtos[i].getCategoria(),
                     this.produtos[i].getPreco().ToString());
             }
 

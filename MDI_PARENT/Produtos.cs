@@ -247,12 +247,9 @@ namespace MDI_PARENT
                 //converter para o tipo dos atributos da classe produtos
                 int cod = Convert.ToInt32(campos[0]);
                 string nomeProduto = campos[1];
-                int categoria = 1;
-
-                if (campos[2].Equals("Software"))
-                {
-                    categoria = 2;
-                }
+                
+                string categoria = campos[2];
+                
                 double preco = Convert.ToDouble(campos[3]);
 
                 //adiciona os objetos da classe Produtos no array usando o método

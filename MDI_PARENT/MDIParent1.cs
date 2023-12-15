@@ -118,11 +118,11 @@ namespace MDI_PARENT
     {
         private int codigo; //de 0 a 3 digitos
         private string nomeProduto; //limitar a 30 carcateres
-        private int categoria; //1 - Hardware | 2 - Software
+        private string categoria; //1 - Hardware | 2 - Software
         private double preco; //formato 0000;
 
         //construtor
-        public Produtos(int codigo, string nomeProduto, int categoria, double preco)
+        public Produtos(int codigo, string nomeProduto, string categoria, double preco)
         {
             this.codigo = codigo;
             this.nomeProduto = nomeProduto;
@@ -141,7 +141,7 @@ namespace MDI_PARENT
             return nomeProduto;
         }
 
-        public int getCategoria()
+        public string getCategoria()
         {
             return categoria;
         }
@@ -163,7 +163,7 @@ namespace MDI_PARENT
             this.nomeProduto = nomeProduto;
         }
 
-        public void setCategoria(int categoria)
+        public void setCategoria(string categoria)
         {
             this.categoria = categoria;
         }

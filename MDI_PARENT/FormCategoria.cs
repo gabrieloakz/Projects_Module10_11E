@@ -88,7 +88,11 @@ namespace MDI_PARENT
                     throw new Exception("Insira uma letra para a Zona.");
                 }
 
-                //verifcar se fila inteiro e positivo
+                //verifcar se fila inteiro e positivo 
+                if (!int.TryParse(textBoxFila.Text, out x))
+                {
+                    
+                }
 
 
             }
