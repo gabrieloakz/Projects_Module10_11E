@@ -111,6 +111,7 @@
             this.buttonGuardar.TabIndex = 5;
             this.buttonGuardar.Text = "Guardar e sair";
             this.buttonGuardar.UseVisualStyleBackColor = true;
+            this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
             // 
             // statusStrip1
             // 

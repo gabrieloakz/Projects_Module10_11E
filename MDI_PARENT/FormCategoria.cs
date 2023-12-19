@@ -205,8 +205,52 @@ namespace MDI_PARENT
         {
             if (true)
             {
-                
+                MessageBox.Show("Não existe nenhum registro selecionado para remover.\n" + "Pressione com duplo clique a linha da categoria pretendida. ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
+
+            //confirmar a eliminação pelo utilizador
+            DialogResult resposta = MessageBox.Show("Tem a ceteza que pretende eliminar esta categoria?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resposta == DialogResult.Yes)
+            {
+                //remover a ategoria
+                grelha.Rows.RemoveAt(posLista);
+                //enviar mensagem paar o status e limpar os campos do formulário e poslista
+                statusMsg.Text = "Eliminada a categoria.";
+                posLista = -1;
+                Limpar();
+            }
+        }
+
+        //método para adicionar uma nova categoria na classe categorias
+        //estamos a usar um vetor para armazenamento temporario
+        //pois ainda no estamos a usar ficheiros
+
+        private void AdicionaCategoria(Categorias c) 
+        {
+            if (num_categorias < MaxCategorias)
+                categorias[num_categorias++] = c;
+            
+        }
+
+        private void buttonGuardar_Click(object sender, EventArgs e)
+        {
+            //guarda cada item da datagridview para o vetor
+            foreach (DataGridViewRow linha in grelha.Rows)
+            {
+                int codigo = Convert.ToInt32(linha.Cells[0].Value);
+                string categoria = linha.Cells[1].Value.ToString();
+                string zona = linha.Cells[2].Value.ToString();
+                int fila = Convert.ToInt32(linha.Cells[3].Value);
+                int prateleira = Convert.ToInt32(linha.Cells[4].Value);
+
+                //adiciona os objetos da classe produtos no array usando o método
+                AdicionaCategoria(new Categorias(codigo, categoria,zona,fila, prateleira));
+            }
+
+            //encerrar o formulário
+            this.Close();
         }
     }
 }
