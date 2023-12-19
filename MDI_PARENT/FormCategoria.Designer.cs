@@ -82,6 +82,7 @@
             this.buttonAtualizar.TabIndex = 2;
             this.buttonAtualizar.Text = "Atualizar";
             this.buttonAtualizar.UseVisualStyleBackColor = true;
+            this.buttonAtualizar.Click += new System.EventHandler(this.buttonAtualizar_Click);
             // 
             // buttonCancelar
             // 
@@ -100,6 +101,7 @@
             this.buttonEliminar.TabIndex = 4;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // buttonGuardar
             // 
@@ -133,6 +135,7 @@
             this.grelha.Name = "grelha";
             this.grelha.Size = new System.Drawing.Size(432, 150);
             this.grelha.TabIndex = 8;
+            this.grelha.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grelha_CellContentDoubleClick);
             // 
             // textBoxCodigo
             // 
